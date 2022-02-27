@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var bGrayBlue:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,6 +24,15 @@ class ViewController: UIViewController {
 
 extension ViewController {
     @objc func btnPressed(sender:UIButton){
-        print("Pressed")
+        DispatchQueue.main.async {
+            switch self.bGrayBlue {
+            case true:
+                self.view.backgroundColor = .systemGray
+                self.bGrayBlue = false
+            case false:
+                self.view.backgroundColor = .systemBlue
+                self.bGrayBlue = true
+            }
+        }
     }
 }
