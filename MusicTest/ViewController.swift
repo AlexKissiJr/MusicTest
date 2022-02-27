@@ -28,7 +28,7 @@ extension ViewController {
             switch self.bGrayBlue {
             case true:
                 self.view.backgroundColor = .systemGray
-                self.bGrayBlue = true
+                self.bGrayBlue = false
             case false:
                 self.view.backgroundColor = .systemBlue
                 self.bGrayBlue = true
